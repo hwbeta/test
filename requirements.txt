@@ -1,1 +1,1 @@
-git+git://github.com/aws/aws-cli@2.1.3#egg=awscli
+git+git://github.com/aws/aws-cli@releases/tag/2.1.3#egg=awscli
