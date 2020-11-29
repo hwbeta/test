@@ -1,0 +1,1 @@
+https://github.com/aws/aws-cli/zipball/2.1.3#egg=awscli
