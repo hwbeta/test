@@ -25,8 +25,9 @@ jobs:
       - uses: oprypin/find-latest-tag@v1
         with:
           repository: aws/aws-cli
-          releases-only: true
           prefix: '2.'
+          releases-only: true
+          sort-tags: true
         id: awscli_version
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
