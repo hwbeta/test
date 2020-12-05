@@ -1,4 +1,4 @@
-FROM balenalib/rpi-raspbian:buster-20201104
+FROM balenalib/rpi-raspbian:buster-20201118
 
 # Install required packages
 RUN apt-get update -q \
