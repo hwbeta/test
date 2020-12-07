@@ -35,9 +35,19 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - name: Set version info
+        run: |
+          echo "BUILD_ARCH=$(uname -m)" >> $GITHUB_ENV
+          echo "BUILD_VER=$(cat AWSCLI_VERSION)" >> $GITHUB_ENV
+          echo "BUILD_BOTOCORE=$(cat BOTOCORE_COMMIT_ID)" >> $GITHUB_ENV
+
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "${{ steps.awscli_version.outputs.tag }}"
+          echo "arch: $BUILD_ARCH"
+          echo "ver: $BUILD_VER"
+          echo "botocore: $BUILD_BOTOCORE"
+          export
