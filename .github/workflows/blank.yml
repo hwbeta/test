@@ -51,3 +51,12 @@ jobs:
           echo "ver: $BUILD_VER"
           echo "botocore: $BUILD_BOTOCORE"
           export
+
+      - name: Qemu prep
+        uses: docker/setup-qemu-action@v1
+
+      - name: Qemu test
+        uses: docker://docker.io/unofficialbot/awscli-builder:buster
+        with:
+          entrypoint: /bin/bash
+          args: "-c \"echo arch: $(uname -m)\""
